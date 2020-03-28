@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>E-Tutor</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link href="font/css/font-awesome.css" rel="stylesheet">
+	<link href="font/css/font-awesome.min.css" rel="stylesheet">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<link rel="stylesheet" href="slick/slick.css">
+	<link href="css/animate.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery.mmenu.all.css">
+	<link rel="stylesheet" href="css/loader.css">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/phone-zalo.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="shortcut icon" href="img/gre1.png">
+</head>
+<body>
+<header>
+	<div class="header-up full">
+		<span>University of Greenwich E-Tutor</span>
+        <a href="javascript:void(0);"  id="myBtn">Log In</a>
+	</div>
+	<div class="header-center full">
+		 <div class="col-lg-6 col-md-6 col-sm-6 img-size" >
+			<div class="row">
+				<a href="#"><img src="https://cms.greenwich.edu.vn/pluginfile.php/1/theme_adaptable/logo/1582019626/RGB_Logo%20DH%20Greenwich%20%28VN%291.jpg" alt=""></a>
+			</div>
+		</div> 
+		
+		
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="row">
+				<div class="search">
+					<form action="">
+						<input type="text" placeholder="Search...">
+						<button><i class="fa fa-search"></i></button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Login Modal content -->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p><a href="javascript:void(0);" id="fgBtn" data-dismiss="modal" >Reset Password</a></p>
+        </div>
+      </div>
+      </div>
+    </div>
+      
+      
+      <!-- Forgot Password Modal content -->
+    <div class="modal fade" id="fg-myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Forgot Password</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Enter Email address</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+              </div>
+              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span>Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+        </div>
+      </div>
+    </div>
+    </div>
+	
+	
+	
+	<div class="header-down full">
+		<div class="left">
+			<ul>
+				<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="#"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+			</ul>
+		</div>
+
+	</div>
+</header>
+<content>
+	<div class="banner full">
+		<div class="slide-banner">
+			<div class="img-banner">
+				<img src="images/banner.jpg" alt="">
+			</div>
+			<div class="img-banner">
+				<img src="images/banner.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="home-body full">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9 col-md-9 col-sm-8 col-sm-12">
+					<div class="row" id="tutors-list">
+						<div class="label-hp full">
+							<h1>Your Courses</h1>
+						</div>
+
+						<!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="tutor-content">
+                                <img src="images/tutor.jpg" alt="">
+                                <span>Albert Einstein</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="tutor-content">
+                                <img src="images/tutor.jpg" alt="">
+                                <span>Albert Einstein</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="tutor-content">
+                                <img src="images/tutor.jpg" alt="">
+                                <span>Albert Einstein</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="tutor-content">
+                                <img src="images/tutor.jpg" alt="">
+                                <span>Albert Einstein</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="tutor-content">
+                                <img src="images/tutor.jpg" alt="">
+                                <span>Albert Einstein</span>
+                            </div>
+                        </div> -->
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+					<div class="row">
+						<div class="label-hp full">
+							<h1>Calendar</h1>
+						</div>
+						<div id="app"></div>
+					</div>
+				</div>
+
+	
+			</div>
+		</div>
+
+
+
+
+
+	</div>
+</content>
+<footer>
+	<div class="copy-right full">
+		Copyright © 2020
+	</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" integrity="sha256-bQmrZe4yPnQrLTY+1gYylfNMBuGfnT/HKsCGX+9Xuqo=" crossorigin="anonymous"></script>
+<script src="bootstrap/js/jquery-3.1.1.min.js"></script>
+
+<script src="slick/slick.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src='https://npmcdn.com/react@15.3.0/dist/react.min.js'></script>
+<script src='https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js'></script>
+<script src="js/wow.min.js"></script>
+<script src="js/text.js"></script>
+<script src="js/jquery.mmenu.all.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
