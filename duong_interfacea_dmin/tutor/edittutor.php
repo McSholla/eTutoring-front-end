@@ -43,7 +43,7 @@ $row = $_SESSION['row']; // data taken from the model : using fetch all
 	}
 
 	/* Set a style for the submit button */
-	.editstudent {
+	.edittutor {
 		background-color: #4CAF50;
 		color: white;
 		padding: 16px 20px;
@@ -54,7 +54,7 @@ $row = $_SESSION['row']; // data taken from the model : using fetch all
 		opacity: 0.9;
 	}
 
-	.editstudent:hover {
+	.edittutor:hover {
 		opacity: 1;
 	}
 
@@ -75,40 +75,37 @@ $row = $_SESSION['row']; // data taken from the model : using fetch all
 
 	<?php
 	foreach($row as $value) {
-		$studentID = $value[0];
-		$studentname = $value[1];
-		$studentGender = $value[2];
-		$studentDOB = $value[3];
-		$studentadress = $value[4];
-		$studentusername = $value[5];
-		$studentpassword = $value[6];
+		$tutorID = $value[0];
+		$tutorname = $value[1];
+		$tutorGender = $value[2];
+		$tutorDOB = $value[3];
+		$tutoradress = $value[4];
+		$tutormail = $value[5];
+		$tutorstudent = $value[6];
 		?>
 
 		<form action="/action_page.php">
 			<div class="container">
 				<h1>Add a student</h1>
 				<hr>
-				<label for="fname">Student Name :</label><br>
-				<input type="text" id="studentname" name="studentname" value="<?php echo $studentname; ?> " placeholder="add student name here">
+				<label for="fname">tutor Name :</label><br>
+				<input type="text" id="tutorname" name="tutorname" value="<?php echo $tutorname; ?> " placeholder="add student name here">
 				<br><br>
-				<label for="lname">Student Gender:</label><br>
-				<input type='number' id="studentgender" name="studentgender" value="<?php echo $studentgender; ?> "><br><br>
+				<label for="lname">tutor Gender:</label><br>
+				<input type='number' id="tutorgender" name="tutorgender" value="<?php echo $tutorGender; ?> "><br><br>
 				<br>
-				<label>Student date of birth</label>
-				<input type="date" id="start" name="student_dob" value="<?php echo $student_dob; ?> " min="1980-01-01" max="2002-12-31">
+				<label>tutor date of birth</label>
+				<input type="date" id="start" name="tutor_dob" value="<?php echo $tutorDOB; ?> " min="1980-01-01" max="2002-12-31">
 				<br>
-				<label for="lname">Student address:</label><br>
-				<input type='text' id="adress" name="studentadress" value="<?php echo $studentadress; ?> "><br><br>
-				<label for="lname">Student mail:</label><br>
-				<input type='text' id="mail" name="studentmail" value="<?php echo $studentmail; ?> "><br><br>
-				<label for="lname">Student username:</label><br>
-				<input type='text' id="username" name="studentusername" value="<?php echo $studentusername; ?> "><br><br>
-				<label for="lname">Student password:</label><br>
-				<input type='text' id="pass" name="studentpassword" value="<?php echo $studentpassword; ?> "><br><br>
-				<hr>
+				<label for="lname">tutor address:</label><br>
+				<input type='text' id="adress" name="tutoradress" value="<?php echo $tutoradress; ?> "><br><br>
+				<label for="lname">tutor mail:</label><br>
+				<input type='text' id="mail" name="tutormail" value="<?php echo $tutormail; ?> "><br><br>
+				<label for="lname">tutor student:</label><br>
+				<input type='text' id="mail" name="tutorstudent" value="<?php echo $tutorstudent; ?> "><br><br>
 				<p>Back to home page <a href="#">HOME</a>.</p>
 
-				<button type="submit" class="editstudent">edit this student</button>
+				<button type="submit" class="edittutor">edit this student</button>
 			</div>
 		</form>
 		<?php
