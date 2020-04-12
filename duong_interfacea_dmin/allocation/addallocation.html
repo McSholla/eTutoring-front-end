@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="addcss.css">
+</head>
+<body>
+
+	<form action="/action_page.php" method="POST">
+		<div class="container">
+			<h1>Add an allocation</h1>
+			<hr>
+			<label>Select a student</label>
+			<select id="demo">
+				<option value="cool" id="hello"></option>
+			</select>
+			<select id="demo">
+				<option value="cool" id="hello"></option>
+			</select>
+			<select id="demo">
+				<option value="cool" id="hello"></option>
+			</select>
+			<label>Select a tutor</label>
+			<select name="tutorid">
+				<option id="tuid"></option>
+			</select>
+			<hr>
+			<p>Back to home page <a href="../header.html">HOME</a>.</p>
+
+			<button type="submit" class="addstudent">Add this allocatiton</button>
+		</div>
+	</form>
+
+</body>
+</html>
+<script type="text/javascript">
+	$.ajax({
+              type : 'GET', //Sử dụng kiểu gửi dữ liệu POST
+              url : 'ong dien link controller vao day', //gửi dữ liệu sang trang data.php
+              dataType: 'json',
+              cache: false,
+              contentType: false,
+              processData: false,
+              data: form_data,
+              success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
+              {
+              	$(document).ready(function () {
+
+              	});
+              }
+          });
+      </script>

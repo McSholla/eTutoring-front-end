@@ -1,0 +1,103 @@
+.containall{
+width: 100%;
+margin : auto;
+padding : unset;
+}
+.header{
+background-color: white;
+align-content: center;
+margin:auto;
+}
+.bignavigator{
+width: 100%;
+background-color: black;
+padding-top: 15px;
+margin-bottom: unset;
+margin : auto;
+}
+.bignavigatorleft{
+
+}
+.bignavigatorleftcontent{
+background-color: black;
+color: white;
+margin-bottom: 9,5px;
+padding-left: 55px;
+
+
+}
+.nignavigatorrightproperties{
+text-align : center;
+float: right;
+color: white;
+}
+#SearchInput{
+float: left;
+width: 332px;
+height: 41px;
+margin-top: 35px;
+border : 1px solid black;
+
+}
+.LogoImage{
+margin-left: 46px;
+}
+.searcharea{
+width: 92%;
+margin:auto;
+}
+
+.contactArea{
+float: right;
+text-align: right;
+margin:50px;
+}
+.searchareainput input[type=text] {
+float: left;
+padding: 5px;
+margin-top: 35px;
+border: 1px solid black;
+font-size: 20px;
+width: 60%;
+}
+
+.searchareainput button{
+font-size: 25px;
+float: left;
+background-color: black;
+width: 55px;
+margin-top: 34px;
+}
+.contactinsearch{
+clear: both;
+align-self: center;
+text-align: right;
+}
+.productnavigator{
+width :100%;
+}
+.navigatorproperties li {
+float: left;
+margin-bottom: 20px;
+height: 100%;
+
+}
+.navigatorproperties li a {
+display: block;
+color: black;
+text-align: center;
+text-decoration: none;
+align-items: center;
+
+}
+.navigatorproperties button{
+border: 1px solid black;
+color: black;
+background-color: white;
+}
+.navigatorproperties{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: white;
