@@ -13,18 +13,19 @@
 			<h1>Add an allocation</h1>
 			<hr>
 			<label>Select a student</label>
-			<select id="demo">
-				<option value="cool" id="hello"></option>
-			</select>
-			<select id="demo">
-				<option value="cool" id="hello"></option>
-			</select>
-			<select id="demo">
-				<option value="cool" id="hello"></option>
-			</select>
+			<form method="POST" action="oong dien link controller vao day">
+				<select id="student1" name="student1">
+				</select>
+				<select id="student2" name="student2">
+					
+				</select>
+				<select id="student3" name="student3">
+					
+				</select>
+			</form>
 			<label>Select a tutor</label>
-			<select name="tutorid">
-				<option id="tuid"></option>
+			<select name="tutorid" id="tutor">
+				
 			</select>
 			<hr>
 			<p>Back to home page <a href="../header.html">HOME</a>.</p>
@@ -47,7 +48,43 @@
               success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
               {
               	$(document).ready(function () {
+              		var studentselect1 = document.getElementById("student1");
+              		var studentselect2 = document.getElementById("student2");
+              		var studentselect3 = document.getElementById("student3");
+              		var tutorselect = document.getElementById("tutor");
 
+              		var studentid = [];
+              		var tutorid = [];
+              		for (var i = 0; i < data.length; i++) {
+              			for (i in data.students) {
+              				//chon ra cai id cua student vao mang
+              				studentid.push(data.students[0]);
+              			}
+              		}
+              		for (var i = 0; i < data.length; i++) {
+              			for (i in data.tutor) {
+              				//chon ra cai id cua tutor vao mang
+              				tutorid.push(data.tutor[0]);
+              			}
+              		}
+              		//lay tu trong mang ra roi add vao option cuar tung select
+              		studentid.forEach(function(student){ 
+              			 var option = document.createElement("option");
+              			 option.text = student;
+              			 studentselect1.appendChild(option);
+              			 studentselect2.appendChild(option);
+              			 studentselect3.appendChild(option);
+
+              		}); 
+              		//lay tu trong mang tutor ra roi add vao option cua select tutor
+              		tutorid.forEach(function(tutor){ 
+              			 var option = document.createElement("option");
+              			 option.text = tutor;
+              			 tutor.appendChild(option);
+              			 tutor.appendChild(option);
+              			 tutor.appendChild(option);
+
+              		}); 
               	});
               }
           });
