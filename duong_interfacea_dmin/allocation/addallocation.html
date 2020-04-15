@@ -50,26 +50,41 @@
               contentType: false,
               processData: false,
               success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
-              {      
+              {
                      console.log(data);
                      var studentselect1 = document.getElementById("student1");
                      var studentselect2 = document.getElementById("student2");
                      var studentselect3 = document.getElementById("student3");
                      var tutor = document.getElementById("tutor");
                      var studentid = [];
-                     var tutorid = [];
+                     var studentName = [];
 
-                     for (var i = data.length - 1; i >= 0; i--) 
-                     {
-                            console_log("hello");
-                        for (var j = data.allocations.length - 1; j >= 0; j--) {
-                              studentid.push(data[i].allocations[j].tutor.id);
-                       }
-                }
-                console.log(studentid);
-
-                
-
-    }
-});
+                     for (var i = data.unallocatedStudents.length - 1; i >= 0; i--) {
+                        studentid.push(data.unallocatedStudents[i].id);
+                 }
+                 for (var i = studentid.length - 1; i >= 0; i--) {
+                        var option = document.createElement("option");
+                        option.text = studentid[i];
+                        studentselect1.appendChild(option);
+                 }
+                 for (var i = studentid.length - 1; i >= 0; i--) {
+                        var option = document.createElement("option");
+                        option.text = studentid[i];
+                        studentselect2.appendChild(option);
+                 }
+                 for (var i = studentid.length - 1; i >= 0; i--) {
+                        var option = document.createElement("option");
+                        option.text = studentid[i];
+                        studentselect3.appendChild(option);
+                 }
+                 for (var i = data.allocations.length - 1; i >= 0; i--) {
+                        tutorid.push(data.allocations[i].tutor.id);
+                 }
+                 for (var i = tutorid.length - 1; i >= 0; i--) {
+                        var option = document.createElement("option");
+                        option.text = tutorid[i];
+                        tutor.appendChild(option);
+                 }
+          }
+   });
 </script>
