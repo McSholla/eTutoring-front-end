@@ -46,48 +46,43 @@
               processData: false,
               data: form_data,
               success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
-              {
-              	$(document).ready(function () {
-              		var studentselect1 = document.getElementById("student1");
-              		var studentselect2 = document.getElementById("student2");
-              		var studentselect3 = document.getElementById("student3");
-              		var tutorselect = document.getElementById("tutor");
+              {      
+                     var studentselect1 = document.getElementById("student1");
+                     var studentselect2 = document.getElementById("student2");
+                     var studentselect3 = document.getElementById("student3");
+                     var tutor = document.getElementById("tutor");
+                     var studentid = [];
+                     var tutorid = [];
+                     for (var i = data.length - 1; i >= 0; i--) 
+                     {
+                        for (var j = data.length - 1; j >= 0; j--) {
+                             studentid.push(data[i].student[j].id);
+                            }
+                     }
+                     for (var i = data.length - 1; i >= 0; i--) {
+                         tutorid.push(data[i].tutor.id);
+                     }
+                     for (var i = studentid.length - 1; i >= 0; i--) {
+                         var option = document.createElement("option");
+                         option.text = studentid[i];
+                         studentselect1.appendChild(option);
+                     }
+                     for (var i = studentid.length - 1; i >= 0; i--) {
+                         var option = document.createElement("option");
+                         option.text = studentid[i];
+                         studentselect2.appendChild(option);
+                     }
+                     for (var i = studentid.length - 1; i >= 0; i--) {
+                         var option = document.createElement("option");
+                         option.text = studentid[i];
+                         studentselect3.appendChild(option);
+                     }
+                     for (var i = tutorid.length - 1; i >= 0; i--) {
+                         var option = document.createElement("option");
+                         option.text = tutorid[i];
+                         tutor.appendChild(option);
+                  }
 
-              		var studentid = [];
-              		var tutorid = [];
-              		for (var i = 0; i < data.length; i++) {
-              			for (i in data.students) {
-              				//chon ra cai id cua student vao mang
-              				studentid.push(data.students[0]);
-              			}
-              		}
-              		for (var i = 0; i < data.length; i++) {
-              			for (i in data.tutor) {
-              				//chon ra cai id cua tutor vao mang
-              				tutorid.push(data.tutor[0]);
-              			}
-              		}
-              		//lay tu trong mang ra roi add vao option cuar tung select
-              		studentid.forEach(function(student){ 
-              			 var option = document.createElement("option");
-              			 option.text = student;
-                                    option.value = student;
-              			 studentselect1.appendChild(option);
-              			 studentselect2.appendChild(option);
-              			 studentselect3.appendChild(option);
-
-              		}); 
-              		//lay tu trong mang tutor ra roi add vao option cua select tutor
-              		tutorid.forEach(function(tutor){ 
-              			 var option = document.createElement("option");
-              			 option.text = tutor;
-                                    option.value = tutor;
-              			 tutor.appendChild(option);
-              			 tutor.appendChild(option);
-              			 tutor.appendChild(option);
-
-              		}); 
-              	});
-              }
-          });
-      </script>
+    }
+});
+</script>

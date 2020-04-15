@@ -1,96 +1,138 @@
 
-<select id="demo" name="locality">
-</select>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="addcss.css">
+</head>
+<body>
+
+  <form action="/action_page.php" method="POST">
+    <div class="container">
+      <h1>Add an allocation</h1>
+      <hr>
+      <label>Select a student</label>
+      <form method="POST" action="oong dien link controller vao day">
+        <select id="student1" name="student1">
+        </select>
+        <select id="student2" name="student2">
+
+        </select>
+        <select id="student3" name="student3">
+
+        </select>
+      </form>
+      <label>Select a tutor</label>
+      <select name="tutorid" id="tutor">
+
+      </select>
+      <hr>
+      <p>Back to home page <a href="../header.html">HOME</a>.</p>
+
+      <button type="submit" class="addstudent">Add this allocatiton</button>
+    </div>
+  </form>
+
+</body>
+</html>
 <script type="text/javascript">
-  data = [{
-    "name": "Alberta",
-    "abbreviation": "AB"
-  },
+  data = 
+  [
   {
-    "name": "British Columbia",
-    "abbreviation": "BC"
-  },
-  {
-    "name": "Manitoba",
-    "abbreviation": "MB"
-  },
-  {
-    "name": "New Brunswick",
-    "abbreviation": "NB"
-  },
-  {
-    "name": "Newfoundland and Labrador",
-    "abbreviation": "NL"
-  },
-  {
-    "name": "Nova Scotia",
-    "abbreviation": "NS"
-  },
-  {
-    "name": "Northwest Territories",
-    "abbreviation": "NT"
-  },
-  {
-    "name": "Nunavut",
-    "abbreviation": "NU"
-  },
-  {
-    "name": "Ontario",
-    "abbreviation": "ON"
-  },
-  {
-    "name": "Prince Edward Island",
-    "abbreviation": "PE"
-  },
-  {
-    "name": "Quebec",
-    "abbreviation": "QC"
-  },
-  {
-    "name": "Saskatchewan",
-    "abbreviation": "SK"
-  },
-  {
-    "name": "Yukon",
-    "abbreviation": "YT"
-  }] 
-  $(document).ready(function () {
-    var col = [];
-    for (var i = 0; i < data.length; i++) {
-      for (var key in data[i]) {
-        if (col.indexOf(key) === -1) {
-          col.push(key);
-        }
-      }
+    "tutor" : {
+      "id" : "1234",
+      "username" : "tutor1",
+      "fullname" : "bro",
+      "gender" : "male",
+      "birthdat" : "1234",
+      "email" : "one@gmail.com"
+    },
+    "student" :
+    [
+    {
+      "id" : "1234",
+      "username" : "student1",
+      "fullname" : "student 1",
+      "gender" : "male",
+      "birthday" : "1234",
+      "email" : "3@gmail.com"
+    },
+    {
+      "id" : "12432",
+      "username" : "432432",
+      "fullname" : "432432 1",
+      "gender" : "female",
+      "birthday" : "1234",
+      "email" : "3@gmail.com"
     }
-                    // CREATE DYNAMIC TABLE.
-                    var table = document.createElement("table");
+    ]
+  },
+  {
+    "tutor" : {
+      "id" : "435",
+      "username" : "tutor1",
+      "fullname" : "bro",
+      "gender" : "male",
+      "birthdat" : "1234",
+      "email" : "one@gmail.com"
+    },
+    "student" :
+    [
+    {
+      "id" : "1234",
+      "username" : "student1",
+      "fullname" : "student 1",
+      "gender" : "male",
+      "birthday" : "1234",
+      "email" : "3@gmail.com"
+    },
+    {
+      "id" : "12432",
+      "username" : "432432",
+      "fullname" : "432432 1",
+      "gender" : "female",
+      "birthday" : "1234",
+      "email" : "3@gmail.com"
+    }
+    ]
+  }
+  ]
+  var studentselect1 = document.getElementById("student1");
+  var studentselect2 = document.getElementById("student2");
+  var studentselect3 = document.getElementById("student3");
+  var tutor = document.getElementById("tutor");
+  var studentid = [];
+  var tutorid = [];
+  console.log(tutorid);
+  for (var i = data.length - 1; i >= 0; i--) 
+  {
+    for (var j = data.length - 1; j >= 0; j--) {
+     studentid.push(data[i].student[j].id);
+   }
+ }
+ for (var i = data.length - 1; i >= 0; i--) {
+   tutorid.push(data[i].tutor.id);
+ }
+ for (var i = studentid.length - 1; i >= 0; i--) {
+   var option = document.createElement("option");
+   option.text = studentid[i];
+   studentselect1.appendChild(option);
+ }
+ for (var i = studentid.length - 1; i >= 0; i--) {
+   var option = document.createElement("option");
+   option.text = studentid[i];
+   studentselect2.appendChild(option);
+ }
+ for (var i = studentid.length - 1; i >= 0; i--) {
+   var option = document.createElement("option");
+   option.text = studentid[i];
+   studentselect3.appendChild(option);
+ }
+ for (var i = tutorid.length - 1; i >= 0; i--) {
+   var option = document.createElement("option");
+   option.text = tutorid[i];
+   tutor.appendChild(option);
+ }
 
-                    // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
-                    var tr = table.insertRow(-1);
-
-                    for (var i = 0; i < col.length; i++) {
-                      var th = document.createElement("th");
-                      th.innerHTML = col[i];
-
-                      tr.appendChild(th);
-                    }
-
-                    // ADD JSON DATA TO THE TABLE AS ROWS.
-                    for (var i = 0; i < data.length; i++) {
-
-                      tr = table.insertRow(-1);
-
-                      for (var j = 0; j < col.length; j++) {
-                        var tabCell = tr.insertCell(-1);
-                        tabCell.innerHTML = data[i][col[j]];
-                      }
-                    }
-
-                     // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-                     var divContainer = document.getElementById("showData");
-                     divContainer.innerHTML = "";
-                     divContainer.appendChild(table);
-
-                   });
-                 </script>
+</script>
