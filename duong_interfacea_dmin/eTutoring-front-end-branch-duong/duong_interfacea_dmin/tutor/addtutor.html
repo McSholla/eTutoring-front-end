@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="addcss.css">
+</head>
+<body>
+
+	<form action="/action_page.php" method="POST">
+		<div class="container">
+			<h1>Add a tutor</h1>
+			<hr>
+			<label for="fname">tutor Name :</label><br>
+			<input type="text" id=tutortname" name="tutorname" placeholder="add student name here">
+			<br><br>
+			<label for="lname">tutor Gender:</label><br>
+			<input type='number' id="tutorgender" name="tutorgender" ><br><br>
+			<br>
+			<label>tutor date of birth</label>
+			<input type="date" id="start" name="tutor_dob" value="1998-03-18" min="1980-01-01" max="2002-12-31">
+			<br>
+			<label for="lname">tutor address:</label><br>
+			<input type='text' id="adress" name="tutoradress" ><br><br>
+			<label for="lname">tutor mail:</label><br>
+			<input type='text' id="mail" name="tutormail" ><br><br>
+			<label for="lname">tutor username:</label><br>
+			<input type='text' id="username" name="tutorusername" ><br><br>
+			<label for="lname">tutor password:</label><br>
+			<input type='password' id="pass" name="tutorpassword" ><br><br>
+			<hr>
+			<p>Back to home page <a href="../tutor/header.html">HOME</a>.</p>
+
+			<button type="submit" class="addtutor">Add this student</button>
+		</div>
+	</form>
+
+</body>
+</html>
+
+tutor

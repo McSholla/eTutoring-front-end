@@ -1,13 +1,8 @@
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../student/header.html">
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Product manager</title>
+	<title>ADMIN page</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width , initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -68,7 +63,8 @@
 				</div>
 				<ul class="navigatorproperties" style="margin-top: 30px;">
 					<div class="row">
-						<li class="col-md-4 col-sm-6 col-xs-6"> 
+						
+						<li class="col-md-4 col-sm-4 col-xs-4"> 
 							<center>
 								<button onclick="window.location.href='../student/addstudent.html'" class="btn-primary">
 									ADD A STUDENT
@@ -77,12 +73,12 @@
 						</li>
 						<li class="col-md-4 col-sm-4 col-xs-4"> 
 							<center>
-								<button onclick="window.location.href='header.html'" class="btn-primary">
+								<button onclick="window.location.href='../header.html'" class="btn-primary">
 									BACK TO MAIN MENU
 								</button>
 							</center>
 						</li>
-						<li class="col-md-4 col-sm-6 col-xs-6"> 
+						<li class="col-md-4 col-sm-4 col-xs-4"> 
 							<center>
 								<button onclick="window.location.href='../student/displayStudent.html'" class="btn-primary">
 									DISPLAY ALL STUDENT
@@ -94,71 +90,6 @@
 				</ul>
 			</div>
 		</div>
-		<center>
-			<div id="showData"></div>
-		</center>
-		<p>Back to home page <a href="../student/header.html">HOME</a>.</p>
-		
 	</div>
 </body>
 </html>
-
-
-<script type="text/javascript">
-	$.ajax({
-              type : 'GET', //Sử dụng kiểu gửi dữ liệu POST
-              url : 'https://etutoring-project.azurewebsites.net/api/list/students',
-              dataType: 'json',
-              cache: false,
-              contentType: false,
-              processData: false,
-			  headers: {"Authorization": "Bearer Zj0vhOd21-TNy29kYCG6iWZAhHCp7uMuND06xZbcApmC93YO0Q3O8a4MIGAdhpFBlGc1E8ZOYcVaFvJ1nlu7rIPr2OmKbXbz3GHsS5H2uZLkTYp39JD0uRP0c9-i1WRcz0nWCeDXFCMbzNXwkRfbggZDWumjECxFk6G105iXVE3ILswwHdMVvOvIHn1zlSLSojSl7ueKemYOMV4acGxqxbnWQZucIUyYfKzMl4-85TJzz8JGHYAJLZXLZrZAI4HKiIDN6riRyrJg1hKqOvnRquTjLy667s9E07SQkt5uGWk-BODqptpyTRQFOnBWYNunSPCn7qeZb3exowVA_DB6Hr5HnUigzM67mlqNx2fru67gCkVSzduoVlqLotvOwlo-"},
-              success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
-              {
-              	if(data == 'false') 
-              	{
-              		alert('json is not sent');
-              	}else{
-              		console.log(data);
-              		var col = [];
-              		for (var i = 0; i < data.length; i++) {
-              			for (var key in data[i]) {
-              				if (col.indexOf(key) === -1) {
-              					col.push(key);
-              				}
-              			}
-              		}
-              		// CREATE DYNAMIC TABLE.
-              		var table = document.createElement("table");
-              		table.border = '1px solid black ';
-              		table.classList.add('table-striped');
-              		table.style = 'margin : auto; width : 80%';
-              		// CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
-              		var tr = table.insertRow(-1);
-
-              		for (var i = 0; i < col.length; i++) {
-              			var th = document.createElement("th");
-              			th.style  = 'text-align : center';
-              			th.innerHTML = col[i];
-
-              			tr.appendChild(th);
-              		}
-              		// ADD JSON DATA TO THE TABLE AS ROWS.
-              		for (var i = 0; i < data.length; i++) {
-
-              			tr = table.insertRow(-1);
-
-              			for (var j = 0; j < col.length; j++) {
-              				var tabCell = tr.insertCell(-1);
-              				tabCell.innerHTML = data[i][col[j]];
-              				tabCell.style = 'text-align : center';
-              			}
-              		}
-              		// FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-              		var divContainer = document.getElementById("showData");
-              		divContainer.innerHTML = "";
-              		divContainer.appendChild(table);
-              	}
-              }
-          });
-      </script>

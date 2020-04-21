@@ -79,7 +79,7 @@ width :100%;
 .navigatorproperties li {
 float: left;
 margin-bottom: 20px;
-
+height: 100%;
 
 }
 .navigatorproperties li a {
