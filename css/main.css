@@ -11,3 +11,203 @@
     width: 100vw;
     height: 100vh;
 }
+
+
+
+
+
+
+
+.card-footer:last-child {
+    border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+}
+.align-items-center {
+    align-items: center !important;
+}
+.justify-content-between {
+    justify-content: space-between !important;
+}
+.d-flex {
+    display: flex !important;
+}
+.card-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+div {
+    display: block;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+.text-white {
+    color: #fff !important;
+}
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem !important;
+}
+.bg-primary {
+    background-color: #007bff !important;
+}
+.ncolor {
+    background-color: #7b7d80 !important;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+.dashboard-card-deck.fixed-width-cards .dashboard-card {
+    width: 300px;
+}
+.dashboard-card-deck .dashboard-card .dashboard-card-img{
+    margin-bottom: .5rem;
+    flex-basis: auto;
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 7rem;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.card-deck .card, .card-deck #page-enrol-users #filterform, #page-enrol-users .card-deck #filterform, .card-deck .que .history, .que .card-deck .history, .card-deck .userprofile .profile_tree section, .userprofile .profile_tree .card-deck section, .card-deck .groupinfobox, .card-deck .well {
+    display: flex;
+    flex: 1 0 0%;
+    flex-direction: column;
+    margin-right: .25rem;
+    margin-bottom: 0;
+    margin-left: .25rem;
+
+}
+.card, #page-enrol-users #filterform, .que .history, .userprofile .profile_tree section, .groupinfobox, .well {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.block .content a, .block .content li a, .block .content td a {
+    color: #51666c;
+}
+a, a:visited, .tabtree .tabrow0 li a {
+    color: #51666c;
+    text-decoration: none;
+}
+a {
+    color: #1177d1;
+    text-decoration: none;
+    background-color: transparent;
+}
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.card-img {
+    width: 100%;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+.block .content a, .block .content li a, .block .content td a {
+    color: #51666c;
+}
+a, a:visited, .tabtree .tabrow0 li a {
+    color: #51666c;
+    text-decoration: none;
+}
+a {
+    color: #1177d1;
+    text-decoration: none;
+    background-color: transparent;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
+
+.block .block-cards .course-info-container {
+    padding: .8rem;
+}
+
+.pr-1, .px-1 {
+    padding-right: .25rem!important;
+}
+.card-body, .userprofile .profile_tree section {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+.align-items-start {
+    align-items: flex-start!important;
+}
+
+.d-flex {
+    display: flex!important;
+}
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.w-100 {
+    width: 100%!important;
+}
+
+.mb-1, .my-1 {
+    margin-bottom: .25rem!important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap!important;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}

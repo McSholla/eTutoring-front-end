@@ -28,6 +28,7 @@ if (loggedIn) {
   document.getElementById('myBtn').innerText = 'Log Out';
   document.getElementById('myBtn').removeEventListener('click', openModal);
   document.getElementById('myBtn').addEventListener('click', logout);
+  if (document.getElementById('menu')) document.getElementById('menu').style.display = 'block';
 } 
 
 

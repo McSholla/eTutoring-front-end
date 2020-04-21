@@ -113,26 +113,20 @@
 	
 	<div class="header-down full">
 		<div class="left">
-			<ul id="menu" style="display: none;">
+			<ul>
 				<li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="tut_dash.html"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-        <li><a href="#"><i class="fa fa-tachometer"></i> Blogs</a></li>
+        <li><a href="#"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+        <a class="nav-link dropdown-toggle my-auto" role="button" href="#" 
+        id="usermenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" 
+        aria-controls="usermenu-dropdown" aria-label="User menu" title="Username">
+          <span class="d-none d-md-inline-block mx-1">Tutor 1</span>
+  </a>
 			</ul>
 		</div>
 
 	</div>
 </header>
 <content>
-	<div class="banner full">
-		<div class="slide-banner">
-			<div class="img-banner">
-				<img src="images/banner.jpg" alt="">
-			</div>
-			<div class="img-banner">
-				<img src="images/banner.jpg" alt="">
-			</div>
-		</div>
-	</div>
 	<div class="home-body full">
 
 		<div class="container">
@@ -140,65 +134,63 @@
 				<div class="col-lg-9 col-md-9 col-sm-8 col-sm-12">
 					<div class="row" id="tutors-list">
 						<div class="label-hp full">
-							<h1>Your Courses</h1>
+							<h1>Dashboard</h1>
 						</div>
 
         
-            <div class="row">
-              <div class="col-xl-4 col-md-6">
-                    <div class="card ncolor bg-primary text-white mb-4">
-                        <div class="card-body">COMP1787</div>
-                        <div class="card-body">Requirement managements</div>
+        
+        <!---Cards Display-->
+        <div class="row">
+            <div class="col-xl-4 col-md-6">
+                  <div class="card bg-primary text-white mb-4">
+                      <div class="card-body">Submission</div>
+                      <div class="card-body">Number of Submission <p id="submission-num" class="small text-white ">10</p>
+                      </div>
+                      <div class="card-footer d-flex align-items-center justify-content-between">
+                          <a class="small text-white stretched-link" href="#">View Details</a>
+                          <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                      </div>
+                  </div>
+            </div>
+
+            <div class="col-xl-4 col-md-6">
+                      <div class="card bg-primary text-white mb-4">
+                        <div class="card-body">Meeting Notes</div>
+                        <div class="card-body">Notes taken</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
                             <a class="small text-white stretched-link" href="#">View Details</a>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>
-              </div>
-  
-              <div class="col-xl-4 col-md-6">
-                        <div class="card ncolor bg-primary text-white mb-4">
-                          <div class="card-body">COMP1108</div>
-                          <div class="card-body">Project</div>
-                          <div class="card-footer d-flex align-items-center justify-content-between">
-                              <a class="small text-white stretched-link" href="#">View Details</a>
-                              <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                          </div>
-                      </div>
-              </div>
-  
-  
-              <div class="col-xl-4 col-md-6">
-                          <div class="card ncolor bg-primary text-white mb-4">
-                              <div class="card-body">Comp1640</div>
-                              <div class="card-body">Enterprise Web Software Development</div>
-                              <div class="card-footer d-flex align-items-center justify-content-between">
-                                  <a class="small text-white stretched-link" href="#">View Details</a>
-                                  <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                              </div>
-                          </div>
-              </div>
+            </div>
 
 
-              
-  
-          </div>
-          
+            <div class="col-xl-4 col-md-6">
+                        <div class="card bg-primary text-white mb-4">
+                            <div class="card-body">Events</div>
+                            <div class="card-body">Upcoming</div>
+                            <div class="card-body">Ongoing</div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                <a class="small text-white stretched-link" href="#">View Details</a>
+                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            </div>
+                        </div>
+            </div>
 
 
+            <div class="col-xl-4 col-md-6" id="students-list">
+                <div class="card bg-primary text-white mb-4">
+                    <div class="card-body">My Students</div>
+                    <div class="card-body">Number of students <p id="students-num" class="small text-white ">10</p>
+                    </div>  
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="Stud_list.html">View Students</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+    </div>
 
-					</div>
-				</div>
-
-	
-			</div>
-		</div>
-
-
-
-
-
-	</div>
+        </div>
 </content>
 <footer>
 	<div class="copy-right full">
@@ -219,5 +211,6 @@
 <script src="js/custom.js"></script>
 <script src="js/moment.js"></script>
 <script src="js/login.js"></script>
+<script src="js/dashboard.js"></script>
 </body>
 </html>
