@@ -4,7 +4,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>E-Tutor</title>
+  <title>E-Tutor</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
 	<link href="font/css/font-awesome.css" rel="stylesheet">
 	<link href="font/css/font-awesome.min.css" rel="stylesheet">
@@ -116,18 +119,18 @@
 	<div class="header-down full">
 	    <div class="left">
 			<ul>
-                <li class="lists"><a class="listss" href="index.html"><i class="fa fa-home"></i> Home</a></li>
+				<li class="lists"><a class="listss" href="index.html"><i class="fa fa-home"></i> Home</a></li>
                 <li class="lists"><a class="listss" href="staff_dash.html"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-                
+
                 
                 <div class="container ">
                     <div class="dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Menu
                         <span class="caret"></span></button>
                         <ul class="dropdown-menu">
-                          <li><a href="users.html">All Users</a></li>
-                          <li><a href="add_user.html">Add New User</a></li>
-                          <li><a href="allocations.html">Allocations</a></li>
+                            <li><a href="allct_list.html">All Users</a></li>
+                            <li><a href="add_user.html">Add New User</a></li>
+                            <li><a href="allocations.html">Allocations</a></li>
                         </ul>
                     </div>
                 </div>
@@ -149,62 +152,34 @@
 				<div class="col-lg-9 col-md-9 col-sm-8 col-sm-12">
 					<div class="row" id="tutors-list">
 						<div class="label-hp full">
-							<h1>Add a user</h1>
+							<h1>Allocated Students</h1>
 						</div>
 
-            <form id="add-user-form">
-              <div id="form-msg"></div>
-              <div class="form-group">
-                <label for="name">UserName</label>
-                <input class="form-control" type="text" id="uname" pattern="[A-Za-z ]{1,30}" required="" autofocus="">
-              </div>
-
-              <div class="form-group">
-                <label for="full-name">Full Name</label>
-                <input class="form-control" type="text" id="name" pattern="[A-Za-z ]{1,30}" required="" autofocus="">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input class="form-control" type="email" id="email" required="">
-              </div>
-              <div class="form-group">
-                <label for="gender">Gender</label>
-                <input class="form-control" type="text" id="gen" required="">
-              </div>
-              <div class="form-group">
-                <label for="date-of-birth">Date of Birth</label>
-                <input class="form-control" type="date" id="dob" required="">
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input class="form-control" type="password" id="pwd" required="">
-              </div>
-              <div class="form-group">
-                <label for="password">Repeat Password</label>
-                <input class="form-control" type="password" id="rep-pwd" required="">
-              </div>
-              
-              
-              <!-- Drop down for roles -->
-              <div class="form-group">
-                <label for="role">Role</label>
-                <select id="role" class="form-control" required="">
-                  <option value="">Select a Role</option>
-                  <option value="student">Student</option>
-                  <option value="tutor">Tutor</option>
-                  <option value="admin">Admin</option>
-                </select>
-                <div class="invalid-feedback">Select a Role</div>
-              </div>
-              <button class="rare-btn" type="submit" id="add-user-btn">Add New User</button>
-            </form>
         
+                        <div class="admin-right">
+        
+                            <div class="bars"></div>
+                            <div id="add-issue">
+                                <h3>Create Schoolwork</h3>
+                                <form action="" id="add-issue-form">
+                                    <div id="form-msg"></div>
+                                    <label>Title</label><br>
+                                    <input type="text" required="required" id="issue-title"><br>
+                                    <label>Description </label> <br>
+                                    <textarea name="" id="issue-desc" cols="50" rows="10" required=""></textarea><br>
+                                                                 
 
-          </div>
+                                    <button class="rare-btn"  id="create-issue-btn" >Submit work</button>
+                                </form>
+                            </div>
+                        </div>
+
+        
         </div>
-      </div>             
-    </div>
-  </div>
+        </div>
+        </div>
+        </div>
+                        
 </content>
 <footer>
 	<div class="copy-right full">
@@ -227,7 +202,7 @@
 <!-- <script src="js/custom.js"></script> -->
 <script src="js/moment.js"></script>
 <script src="js/login.js"></script>
-
+<script src="js/allc_list.js"></script>
 
 
 </body>

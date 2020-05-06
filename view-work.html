@@ -4,7 +4,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>E-Tutor</title>
+  <title>E-Tutor</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
 	<link href="font/css/font-awesome.css" rel="stylesheet">
 	<link href="font/css/font-awesome.min.css" rel="stylesheet">
@@ -116,18 +119,18 @@
 	<div class="header-down full">
 	    <div class="left">
 			<ul>
-                <li class="lists"><a class="listss" href="index.html"><i class="fa fa-home"></i> Home</a></li>
+				<li class="lists"><a class="listss" href="index.html"><i class="fa fa-home"></i> Home</a></li>
                 <li class="lists"><a class="listss" href="staff_dash.html"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-                
+
                 
                 <div class="container ">
                     <div class="dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Menu
                         <span class="caret"></span></button>
                         <ul class="dropdown-menu">
-                          <li><a href="users.html">All Users</a></li>
-                          <li><a href="add_user.html">Add New User</a></li>
-                          <li><a href="allocations.html">Allocations</a></li>
+                            <li><a href="allct_list.html">All Users</a></li>
+                            <li><a href="add_user.html">Add New User</a></li>
+                            <li><a href="allocations.html">Allocations</a></li>
                         </ul>
                     </div>
                 </div>
@@ -149,62 +152,92 @@
 				<div class="col-lg-9 col-md-9 col-sm-8 col-sm-12">
 					<div class="row" id="tutors-list">
 						<div class="label-hp full">
-							<h1>Add a user</h1>
+							<h1>Allocated Students</h1>
 						</div>
 
-            <form id="add-user-form">
-              <div id="form-msg"></div>
-              <div class="form-group">
-                <label for="name">UserName</label>
-                <input class="form-control" type="text" id="uname" pattern="[A-Za-z ]{1,30}" required="" autofocus="">
-              </div>
-
-              <div class="form-group">
-                <label for="full-name">Full Name</label>
-                <input class="form-control" type="text" id="name" pattern="[A-Za-z ]{1,30}" required="" autofocus="">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input class="form-control" type="email" id="email" required="">
-              </div>
-              <div class="form-group">
-                <label for="gender">Gender</label>
-                <input class="form-control" type="text" id="gen" required="">
-              </div>
-              <div class="form-group">
-                <label for="date-of-birth">Date of Birth</label>
-                <input class="form-control" type="date" id="dob" required="">
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input class="form-control" type="password" id="pwd" required="">
-              </div>
-              <div class="form-group">
-                <label for="password">Repeat Password</label>
-                <input class="form-control" type="password" id="rep-pwd" required="">
-              </div>
-              
-              
-              <!-- Drop down for roles -->
-              <div class="form-group">
-                <label for="role">Role</label>
-                <select id="role" class="form-control" required="">
-                  <option value="">Select a Role</option>
-                  <option value="student">Student</option>
-                  <option value="tutor">Tutor</option>
-                  <option value="admin">Admin</option>
-                </select>
-                <div class="invalid-feedback">Select a Role</div>
-              </div>
-              <button class="rare-btn" type="submit" id="add-user-btn">Add New User</button>
-            </form>
         
+        <div class="create-form full">
+							<div class=" label-dashboard">
+								<h3><i class="fa fa-bars"></i> Issue Details</h3>
+							</div>
+							<div class="issue-detail full">
+								<div class="header-issue full">
+									<p class="title" id="issue-title">Title: Issue Title</p>
+									<p class="author" id="issue-author">Creator: <a href="profile.html?id=5e8e56881604ff1df4a80919">Israel Obanijesu</a></p>
+									<p class="author" id="issue-participants">Participants:  <a href="profile.html?id=5eadeab82b13781de805ef1c">Cuong Truoc Quong</a>, <a href="profile.html?id=5e8e5c5e1604ff1df4a8092b">Savannah Reid</a>, <a href="profile.html?id=5e8e5c361604ff1df4a8092a">Pamela Fields</a></p>
+									<p id="issue-date">Date: May 6th 2020, 1:11:29 am</p>
+								</div>
+								<hr style="width: 100%; border-width: 2px;">
+								<div class="content-issue full">
+									
+									<div class="description-issue full" id="issue-desc"><p>Issue Description</p></div>
+									<hr style="width: 100%; border-width: 2px;">
+									<div class="list-file full" id="issue-files">
+									<div class="file-item">
+                  <a href="" data-toggle="modal" data-target="#myModal2">
+                    <div class="item-thumb document-pdf" id="0" data-value="https://firebasestorage.googleapis.com/v0/b/e-tutor-cf992.appspot.com/o/1588702283951-Israel%20Obanijesu.pdf?alt=media&amp;token=ca0efcc3-167a-488a-8c0c-4bd38522ddd0">
+                    </div>
+                  </a>
+                </div></div>
+								</div>
+								<hr style="width: 100%; border-width: 2px;">
+								<div class="full">
+									<h3> Comments</h3>
+								</div>
+								<div class="comment-issue full">
+									<div id="comments">
+									</div>
+									<div class="full" style="margin-top: 10px;">
+										<h3> Leave a Comment</h3>
+									</div>
+									<form action="" id="comment-form">
+										<textarea name="" id="comment" cols="50" rows="7" placeholder="Comment..." required=""></textarea><br>
+										
+										<button id="comment-btn" class="btn-create-issue"><div class="btn">Submit</div><div class="ink-visual-container"><div class="ink-visual-static"></div></div></button>
+									</form>
+								</div>
+								<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								   	<div class="modal-dialog">
+								      	<div class="modal-content">
+								         	<div class="modal-header">
+								            	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><div class="btn"><span aria-hidden="true">×</span></div><div class="ink-visual-container"><div class="ink-visual-static"></div></div></button>
+								            	<h4 class="modal-title" id="myModalLabel"></h4>
+								         	</div>
+								         	<div class="modal-body full">
+								            	<img id="modal-image" src="images/tutor.jpg" alt="">
+								         	</div>
+								      	</div>
+								   	</div>
+								</div>
+								<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								   	<div class="modal-dialog">
+								      	<div class="modal-content">
+								         	<div class="modal-header">
+								            	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><div class="btn"><span aria-hidden="true">×</span></div><div class="ink-visual-container"><div class="ink-visual-static"></div></div></button>
+								            	<h4 class="modal-title" id="myModalLabel"></h4>
+								         	</div>
+								         	<div class="modal-body full">
+								            	<div class="btn-download">
+								            		<a id="modal-file" href="" download=""><i class="fa fa-download"></i>Download</a>
+								            	</div>
+								            	<div class="file-document">
+								            		<img src="images/pdf.png" alt="">
+								            	</div>
+								         	</div>
+								      	</div>
+								   	</div>
+								</div>
+							</div>
+							
+							
+						</div> 
 
-          </div>
+        
         </div>
-      </div>             
-    </div>
-  </div>
+        </div>
+        </div>
+        </div>
+                        
 </content>
 <footer>
 	<div class="copy-right full">
@@ -227,7 +260,7 @@
 <!-- <script src="js/custom.js"></script> -->
 <script src="js/moment.js"></script>
 <script src="js/login.js"></script>
-
+<script src="js/allc_list.js"></script>
 
 
 </body>
