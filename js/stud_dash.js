@@ -5,7 +5,7 @@ window.addEventListener('load', async () => {
       const data = await response.json();
       const userId = data.id;
       if (data.role === 'tutor') {
-          const submissionResponse = await fetch(`https://etutoring-project.azurewebsites.net/api/dashboard/tutor-overview`, {
+          const submissionResponse = await fetch(`https://etutoring-project.azurewebsites.net/api/dashboard/student-overview`, {
               headers: { Authorization: `Bearer ${token}` }
           });
           const submissionData = await submissionResponse.json();

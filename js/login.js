@@ -5,11 +5,13 @@ $(document).ready(function(){
   });
 });
 
+
+
 const openModal = () => {
   $('#myModal').modal();
 }
 
-document.getElementById('myBtn').addEventListener('click', openModal);
+if (document.getElementById('myBtn')) document.getElementById('myBtn').addEventListener('click', openModal);
 
 let loggedIn = localStorage.getItem('loggedIn');
 const token = localStorage.getItem('access_token');
@@ -24,14 +26,34 @@ if (!token || !expiresIn) {
   autoLogout(remainingMilliseconds);
 }
 
+const configureDashboard = async () => {
+  const response = await fetch('https://etutoring-project.azurewebsites.net/api/auth/personal-info', {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      const data = await response.json();
+  if (data.role === 'tutor') {
+    document.getElementById('dash-menu').setAttribute('href', 'tut_dash.html');
+  } else if (data.role === 'student') {
+    document.getElementById('dash-menu').setAttribute('href', 'stud_dash.html');
+  } else {
+    if (document.getElementById('dash-menu')) {
+    document.getElementById('dash-menu').setAttribute('href', 'staff_dash.html');
+    }
+  }
+}
+
 if (loggedIn) {
+  if (document.getElementById('myBtn')) {
   document.getElementById('myBtn').innerText = 'Log Out';
   document.getElementById('myBtn').removeEventListener('click', openModal);
   document.getElementById('myBtn').addEventListener('click', logout);
+  configureDashboard();
+  }
+
   if (document.getElementById('menu')) document.getElementById('menu').style.display = 'block';
 } 
 
-
+if (document.getElementById('lgn')) {
 document.getElementById('lgn').addEventListener('click', async event => {
   event.preventDefault();
   const username = document.getElementById('usrname').value;
@@ -62,6 +84,7 @@ document.getElementById('lgn').addEventListener('click', async event => {
   }
  
 }); 
+}
 
 function autoLogout (milliseconds) {
   setTimeout(() => {

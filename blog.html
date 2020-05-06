@@ -5,21 +5,22 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>E-Tutor</title>
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
 	<link href="font/css/font-awesome.css" rel="stylesheet">
 	<link href="font/css/font-awesome.min.css" rel="stylesheet">
-	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
+	<!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'> -->
 	<link rel="stylesheet" href="slick/slick-theme.css">
 	<link rel="stylesheet" href="slick/slick.css">
 	<link href="css/animate.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/jquery.mmenu.all.css">
 	<link rel="stylesheet" href="css/loader.css">
-	<link rel="stylesheet" href="css/home.css">
+
 	<link rel="stylesheet" href="css/phone-zalo.css">
 	<link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/dropdown.css">
+  <link rel="stylesheet" href="css/dropdown.css">
+  <link rel="stylesheet" href="css/home.css">
   
 	<link rel="shortcut icon" href="img/gre1.png">
 </head>
@@ -112,16 +113,28 @@
 	
 	
 	<div class="header-down full">
-		<div class="left">
+	    <div class="left">
 			<ul>
 				<li class="lists"><a class="listss" href="index.html"><i class="fa fa-home"></i> Home</a></li>
-        <li class="lists"><a class="listss" href="#"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-        <a class="nav-link dropdown-toggle my-auto" role="button" href="#" 
-        id="usermenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" 
-        aria-controls="usermenu-dropdown" aria-label="User menu" title="Username">
-          <span class="d-none d-md-inline-block mx-1">Student 1</span>
-  </a>
-			</ul>
+                <li class="lists"><a class="listss" href="staff_dash.html"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+
+                
+                <div class="container ">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Menu
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="users.html">All Users</a></li>
+                            <li><a href="add_user.html">Add New User</a></li>
+                            <li><a href="allocations.html">Allocations</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </ul>
+            
+            
+            
 		</div>
 
 	</div>
@@ -135,17 +148,16 @@
 				<div class="col-lg-9 col-md-9 col-sm-8 col-sm-12">
 					<div class="row" id="tutors-list">
 						<div class="label-hp full">
-							<h1>Your Courses</h1>
+							<h1>Blogs</h1>
 						</div>
 
         
         
         
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-xl-4 col-md-6">
                                   <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Submission</div>
-                                    <div class="card-body">Number of Submission <p id="submission-num" class="small text-white ">10</p></div>
+                                      <div class="card-body">Tutors</div>
                                       <div class="card-footer d-flex align-items-center justify-content-between">
                                           <a class="small text-white stretched-link" href="#">View Details</a>
                                           <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -155,7 +167,7 @@
                 
                             <div class="col-xl-4 col-md-6">
                                       <div class="card bg-primary text-white mb-4">
-                                        <div class="card-body">Meeting Notes</div>
+                                        <div class="card-body">Students</div>
                                         <div class="card-footer d-flex align-items-center justify-content-between">
                                             <a class="small text-white stretched-link" href="#">View Details</a>
                                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -166,7 +178,7 @@
                 
                             <div class="col-xl-4 col-md-6">
                                         <div class="card bg-primary text-white mb-4">
-                                            <div class="card-body">Events</div>
+                                            <div class="card-body">Blogs</div>
                                             <div class="card-footer d-flex align-items-center justify-content-between">
                                                 <a class="small text-white stretched-link" href="#">View Details</a>
                                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -174,7 +186,7 @@
                                         </div>
                             </div>
                 
-                        </div>
+                        </div> -->
 </content>
 <footer>
 	<div class="copy-right full">
@@ -182,20 +194,24 @@
 	</div>
 </footer>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" integrity="sha256-bQmrZe4yPnQrLTY+1gYylfNMBuGfnT/HKsCGX+9Xuqo=" crossorigin="anonymous"></script>
-<script src="bootstrap/js/jquery-3.1.1.min.js"></script>
+<!-- <script src="bootstrap/js/jquery-3.1.1.min.js"></script> -->
 
 <script src="slick/slick.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script src='https://npmcdn.com/react@15.3.0/dist/react.min.js'></script>
-<script src='https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js'></script>
+<!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
+<!-- <script src='https://npmcdn.com/react@15.3.0/dist/react.min.js'></script> -->
+<!-- <script src='https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js'></script> -->
 <script src="js/wow.min.js"></script>
 <script src="js/text.js"></script>
 <script src="js/jquery.mmenu.all.js"></script>
-<script src="js/custom.js"></script>
+<!-- <script src="js/custom.js"></script> -->
 <script src="js/moment.js"></script>
 <script src="js/login.js"></script>
-<script src="js/dashboard.js"></script>
-<!-- <script src="js/stud_dash.js"></script> -->
+
+
+
 </body>
+
 </html>
