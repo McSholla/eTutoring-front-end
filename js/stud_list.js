@@ -5,7 +5,7 @@ window.addEventListener('load', async () => {
     const studentsData = await studentsResponse.json();
     console.log(studentsData);
     for (let i = 0; i < studentsData.students.length; i++) {
-        document.getElementById('student-list').insertAdjacentHTML(
+        document.getElementById('tutors-list').insertAdjacentHTML(
             'beforeend',
             `<tr>
                 <td>${studentsData.students[i].userName}</td>
@@ -13,6 +13,7 @@ window.addEventListener('load', async () => {
                 <td>${studentsData.students[i].gender}</td>
                 <td>${studentsData.students[i].birthday}</td>
                 <td>${studentsData.students[i].email}</td>
+               
             </tr>`
         );
     }

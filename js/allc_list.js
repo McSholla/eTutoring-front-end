@@ -34,8 +34,11 @@ window.addEventListener('load', async () => {
             }
             const allocateResponse = await fetch(`https://etutoring-project.azurewebsites.net/api/allocation/add`, {
                 method: 'POST',
-                headers: {Authorization: `Bearer ${token}`},
-                body: data
+                headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}`},
+                body: JSON.stringify({
+                    tutorid:tutorId,
+                    studentIds: selectedStudents
+                })
             });
             const allocateResponseData = await allocateResponse.json();
             console.log(allocateResponseData);

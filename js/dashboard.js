@@ -12,7 +12,7 @@ window.addEventListener('load', async () => {
           document.getElementById('submission-num').innerText = submissionData.numberOfFiles;
           document.getElementById('students-num').innerText = submissionData.numberOfStudents;
       } else if (data.role === 'student') {
-          document.getElementById('students-list').style.display = 'none';
+        //   document.getElementById('students-list').style.display = 'none';
       const submissionResponse = await fetch(`https://etutoring-project.azurewebsites.net/api/files/all-files?userId=${userId}`, {
           headers: {
               Authorization: `Bearer ${token}`

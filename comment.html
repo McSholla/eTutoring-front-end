@@ -57,6 +57,7 @@
 	
 
       
+      
 
 	
 	
@@ -68,17 +69,7 @@
                 <li class="lists"><a class="listss" href="staff_dash.html"><i class="fa fa-tachometer"></i> Dashboard</a></li>
 
                 
-                <div class="container ">
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Menu
-                        <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li><a href="allct_list.html">All Users</a></li>
-                            <li><a href="add_user.html">Add New User</a></li>
-                            <li><a href="allocations.html">Allocations</a></li>
-                        </ul>
-                    </div>
-                </div>
+                
 
             </ul>
             
@@ -97,27 +88,60 @@
 				<div class="col-lg-9 col-md-9 col-sm-8 col-sm-12">
 					<div class="row" id="tutors-list">
 						<div class="label-hp full">
-							<h1>Allocated Students</h1>
+							<h1>View Submission Details</h1>
 						</div>
 
-        
-                        <div class="admin-right">
-        
-                            <div class="bars"></div>
-                            <div id="add-issue">
-                                <h3>Create Schoolwork</h3>
-                                <form action="" id="add-issue-form">
-                                    <div id="form-msg"></div>
-                                    <label>Title</label><br>
-                                    <input type="text" required="required" id="issue-title"><br>
-                                    <label>Description </label> <br>
-                                    <textarea name="" id="issue-desc" cols="50" rows="10" required=""></textarea><br>
-                                                                 
+                        <div class="col-lg-9 col-md-9 col-sm-8 col-sm-12">
+                            <span style="display: block; margin-top: 10px; font-size: 20px;">
+                            <div class="create-form full">
+                               
+                                <div class="issue-detail full">
+                                    <div class="header-issue full">
+                                        <p class="title" id="issue-title">Title: Issue Title</p>
+                                        <p class="author" id="issue-author">Creator: Israel Obanijesu</p>
+                                       
+                                    </div>
+                                    <hr style="width: 100%; border-width: 2px;">
+                                    <div class="content-issue full">
+                                        
+                                        <div class="description-issue full" id="issue-desc"><p> Description</p></div>
+                                        <hr style="width: 100%; border-width: 2px;">
+                                        <div class="list-file full" id="issue-files">
+                                        <div class="file-item">
 
-                                    <button class="rare-btn"  id="create-issue-btn" >Submit work</button>
-                                </form>
-                            </div>
+                    </div></div>
+                                    </div>
+                                    <hr style="width: 100%; border-width: 2px;">
+                                    <div class="full">
+                                        <h3> Comments</h3>
+                                    </div>
+                                    <div class="comment-issue full">
+                                        <div id="comments">
+                                        <div class="cmt-content full" id="5eb2c86468a9b4000450aebc">
+                
+                    <div class="content">
+                      <p id="comment-content-5eb2c86468a9b4000450aebc">See me in my office next week Monday!</p>
+                    </div>
+                   
+                    
+                  </div>
+              </div></div>
+                                        <div class="full" style="margin-top: 10px;">
+                                            <h3> Leave a Comment</h3>
+                                        </div>
+                                        <form action="" id="comment-form">
+                                            <textarea name="" id="comment" cols="50" rows="7" placeholder="Comment..." required=""></textarea><br>
+                                            
+                                            <button id="comment-btn" class="btn-create-issue"><div class="btn">Submit</div><div class="ink-visual-container"><div class="ink-visual-static"></div></div></button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                                
+                                
+                            </div>	
                         </div>
+                        
 
         
         </div>
@@ -147,8 +171,7 @@
 <!-- <script src="js/custom.js"></script> -->
 <script src="js/moment.js"></script>
 <script src="js/login.js"></script>
-<script src="js/create.js"></script>
-
+<script src="js/comment.js"></script>
 
 
 </body>

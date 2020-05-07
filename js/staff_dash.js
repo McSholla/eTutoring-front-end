@@ -5,12 +5,12 @@ window.addEventListener('load', async () => {
     });
     const responseData = await response.json();
     document.getElementById('students-total-num').innerText = responseData.length;
-
+    console.log(responseData);
 
     const responsestud = await fetch(`https://etutoring-project.azurewebsites.net/api/list/tutors`, {
         method: 'GET',
         headers: {Authorization: `Bearer ${token}`}
     });
     const responseDatastud = await responsestud.json();
-    document.getElementById('tutors-total-num').innerText = responseData.length;
+    document.getElementById('tutors-total-num').innerText = responseDatastud.length;
 });

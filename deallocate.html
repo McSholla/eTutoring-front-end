@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/dropdown.css">
   <link rel="stylesheet" href="css/home.css">
-  
+  <link rel="stylesheet" href="css/table.css">
 	<link rel="shortcut icon" href="img/gre1.png">
 </head>
 <body>
@@ -149,18 +149,35 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-9 col-md-9 col-sm-8 col-sm-12">
-					<div class="row" id="tutors-list">
+					<div class="row" id="unstudent-list">
 						<div class="label-hp full">
 							<h1>Allocated Students</h1>
 						</div>
 
         
-            <form id="unalloc-stud-list">
-              
-            </form>
-
-            <button id="deallc_final">Proceed to deallocate</button>
-
+              <table>
+                <colgroup>
+                  <col span="5" style="background-color:">
+                  <col style="background-color:rgb(64, 233, 149)">
+                </colgroup>
+                <thead>
+                    <tr>
+                      <th>Username</th>
+                      <th>FullName</th>
+                      <th>Gender</th>
+                      <th>Date of Birth </th>
+                      <th>email</th>
+                      <th>Deallocate</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="student-list">
+                </tbody>
+            </table> 
+      </div>
+    </div>
+  </div>
+</div>
         
         
                         
@@ -186,7 +203,7 @@
 <!-- <script src="js/custom.js"></script> -->
 <script src="js/moment.js"></script>
 <script src="js/login.js"></script>
-<script src="js/allc_list.js"></script>
+<script src="js/deallc.js"></script>
 
 
 </body>
