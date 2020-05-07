@@ -4,27 +4,24 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>E-Tutor</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
+	<title>E-Tutor</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link href="font/css/font-awesome.css" rel="stylesheet">
 	<link href="font/css/font-awesome.min.css" rel="stylesheet">
-	<!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'> -->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
 	<link rel="stylesheet" href="slick/slick-theme.css">
 	<link rel="stylesheet" href="slick/slick.css">
 	<link href="css/animate.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/jquery.mmenu.all.css">
 	<link rel="stylesheet" href="css/loader.css">
-
+	<link rel="stylesheet" href="css/home.css">
 	<link rel="stylesheet" href="css/phone-zalo.css">
 	<link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/dropdown.css">
-  <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/table.css">
+	<link rel="stylesheet" href="css/dropdown.css">
+  
 	<link rel="shortcut icon" href="img/gre1.png">
 </head>
 <body>
@@ -55,6 +52,7 @@
 	
 	
 
+
       
       
 
@@ -62,61 +60,59 @@
 	
 	
 	<div class="header-down full">
-	    <div class="left">
+		<div class="left">
 			<ul>
 				<li class="lists"><a class="listss" href="index.html"><i class="fa fa-home"></i> Home</a></li>
-                <li class="lists"><a class="listss" href="staff_dash.html"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-
-                
-
-
-            </ul>
-            
-            
-            
+        <li class="lists"><a class="listss"  id="dash-menu"><i class="fa fa-tachometer" ></i> Dashboard</a></li>
+       
+  </a>
+			</ul>
 		</div>
 
 	</div>
 </header>
 <content>
-
 	<div class="home-body full">
 
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-9 col-md-9 col-sm-8 col-sm-12">
-					<div class="row" id="unstudent-list">
+					<div class="row" id="tutorss-list">
 						<div class="label-hp full">
-							<h1>Allocated Students</h1>
+							<h1>View Tutors</h1>
 						</div>
 
         
-              <table>
-                <colgroup>
-                  <col span="5" style="background-color:">
-                  <col style="background-color:rgb(64, 233, 149)">
-                </colgroup>
-                <thead>
-                    <tr>
-                      <th>Username</th>
-                      <th>FullName</th>
-                      <th>Gender</th>
-                      <th>Date of Birth </th>
-                      <th>email</th>
-                      <th>Deallocate</th>
-                    </tr>
-                </thead>
+        
+        <!---Student table Display-->
+     
+
+        <table>
+          <colgroup>
+            <col span="3" style="background-color:">
+            <col style="background-color:rgb(64, 233, 149)">
+          </colgroup>
+          <thead>
+              <tr>
+                <th>Username</th>
+				<th>Full name</th>
+				<th>Gender</th>
+				<th>Birthday</th>
+                <th>email</th>
+
                 
-                <tbody id="student-list">
-                </tbody>
-            </table> 
-      </div>
-    </div>
-  </div>
-</div>
-        
-        
-                        
+              </tr>
+          </thead>
+          
+          <tbody id="tutors-list">
+          </tbody>
+      </table> 
+
+
+
+
+
+
 </content>
 <footer>
 	<div class="copy-right full">
@@ -124,24 +120,19 @@
 	</div>
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" integrity="sha256-bQmrZe4yPnQrLTY+1gYylfNMBuGfnT/HKsCGX+9Xuqo=" crossorigin="anonymous"></script>
-<!-- <script src="bootstrap/js/jquery-3.1.1.min.js"></script> -->
+<script src="bootstrap/js/jquery-3.1.1.min.js"></script>
 
 <script src="slick/slick.min.js"></script>
-<!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
-<!-- <script src='https://npmcdn.com/react@15.3.0/dist/react.min.js'></script> -->
-<!-- <script src='https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js'></script> -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src='https://npmcdn.com/react@15.3.0/dist/react.min.js'></script>
+<script src='https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js'></script>
 <script src="js/wow.min.js"></script>
 <script src="js/text.js"></script>
 <script src="js/jquery.mmenu.all.js"></script>
-<!-- <script src="js/custom.js"></script> -->
+<script src="js/custom.js"></script>
 <script src="js/moment.js"></script>
 <script src="js/login.js"></script>
-<script src="js/deallc.js"></script>
-
-
+<script src="js/view_tut.js"></script>
 </body>
-
 </html>
