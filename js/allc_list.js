@@ -41,7 +41,7 @@ window.addEventListener('load', async () => {
                 })
             });
             const allocateResponseData = await allocateResponse.json();
-            console.log(allocateResponseData);
+            alert(allocateData.message);
         }
     });
 });

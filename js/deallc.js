@@ -30,7 +30,8 @@ window.addEventListener('load', async () => {
                 })
             });
             const deallocateData = await deallocateRes.json();
-            console.log(deallocateData);
+            alert(deallocateData.message);
+            
         });
     }}
 });
