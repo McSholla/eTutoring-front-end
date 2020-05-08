@@ -57,7 +57,6 @@
 	
 
       
-      
 
 	
 	
@@ -67,10 +66,9 @@
 			<ul>
 				<li class="lists"><a class="listss" href="index.html"><i class="fa fa-home"></i> Home</a></li>
                 <li class="lists"><a class="listss" id="dash-menu"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-                <li class="lists"><a class="listss" href="view-work.html" id="Nblog"><i class="fa fa-tachometer"></i> Create New Blog</a></li>
-                
-                
 
+                
+											
             </ul>
             
             
@@ -88,11 +86,27 @@
 				<div class="col-lg-9 col-md-9 col-sm-8 col-sm-12">
 					<div class="row" id="tutors-list">
 						<div class="label-hp full">
-							<h1>Blog</h1>
+							<h1>Send Submissions</h1>
 						</div>
 
-        <div id="issues"></div>
-                        
+        
+                        <div class="admin-right">
+        
+                            <div class="bars"></div>
+                            <div id="add-issue">
+                                <h3>Create Schoolwork</h3>
+                                <form action="" id="add-issue-form">
+                                    <div id="form-msg"></div>
+                                    <label>Title</label><br>
+                                    <input type="text" required="required" id="issue-title"><br>
+                                    <label>Description </label> <br>
+                                    <textarea name="" id="issue-desc" cols="50" rows="10" required=""></textarea><br>
+                                                                 
+
+                                    <button class="rare-btn"  id="create-issue-btn" >Submit work</button>
+                                </form>
+                            </div>
+                        </div>
 
         
         </div>
@@ -122,7 +136,8 @@
 <!-- <script src="js/custom.js"></script> -->
 <script src="js/moment.js"></script>
 <script src="js/login.js"></script>
-<script src="js/view_work.js"></script>
+<script src="js/create.js"></script>
+
 
 
 </body>
